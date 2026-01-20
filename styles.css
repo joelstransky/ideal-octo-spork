@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #1a1a2e;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    z-index: 100;
+}
+
+.screen.hidden {
+    display: none;
+}
+
+.screen h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.screen p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+.screen .lives-info {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #ff6b6b;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background: #e94560;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(233, 69, 96, 0.6);
+    background: #ff6b6b;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* HUD */
+#hud {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 50;
+    pointer-events: none;
+}
+
+#hud.hidden {
+    display: none;
+}
+
+#score, #lives {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#lives {
+    color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .screen h1 {
+        font-size: 2.5rem;
+    }
+    
+    .screen p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    button {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+    }
+}
