@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway Surfers Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container"></div>
+    
+    <!-- Title Screen -->
+    <div id="title-screen" class="screen">
+        <h1>🏃 RUNNER GAME 🏃</h1>
+        <p>Use LEFT and RIGHT arrow keys or A/D to switch lanes</p>
+        <p>Press SPACE or UP to jump over obstacles</p>
+        <p>Avoid the red obstacles!</p>
+        <p class="lives-info">❤️❤️❤️ You have 3 lives</p>
+        <button id="start-btn">START GAME</button>
+    </div>
+    
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+        <h1>💀 GAME OVER 💀</h1>
+        <p>You ran for <span id="final-score">0</span> seconds!</p>
+        <p id="lives-remaining" class="lives-info"></p>
+        <button id="restart-btn">TRY AGAIN</button>
+    </div>
+    
+    <!-- Final Game Over Screen -->
+    <div id="final-screen" class="screen hidden">
+        <h1>🎮 GAME OVER 🎮</h1>
+        <p>All lives lost!</p>
+        <p>Your best time: <span id="best-time">0</span> seconds</p>
+        <button id="title-btn">RETURN TO TITLE</button>
+    </div>
+    
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+        <div id="score">Time: 0s</div>
+        <div id="lives">❤️❤️❤️</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

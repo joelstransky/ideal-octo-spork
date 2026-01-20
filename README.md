@@ -1,91 +1,56 @@
-# Number Guessing Game
+# Subway Surfers Clone
 
-A fun and interactive command-line number guessing game written in Python.
+A 3D endless runner game built with Three.js! Run, jump, and dodge obstacles in this arcade-style game.
 
-## Description
+## 🎮 Features
 
-Test your guessing skills! The computer thinks of a random number, and you try to guess it. The game provides helpful hints to guide you towards the correct answer.
+- **3D Graphics** - Built with Three.js for smooth 3D rendering
+- **3 Lanes** - Switch between left, center, and right lanes
+- **Jump Mechanic** - Jump over ground obstacles
+- **3 Lives** - Get 3 chances before returning to title screen
+- **Title Screen** - Game intro with instructions
+- **Score Tracking** - Time-based scoring system
 
-## Features
+## 🎯 How to Play
 
-- 🎯 Guess a random number between 1 and 100
-- 💡 Helpful hints (higher/lower) after each guess
-- 📊 Track your attempts for each round
-- 🏆 Keep track of your best score
-- 📈 View statistics across multiple games
-- 🎮 Play multiple rounds
+- **Left/Right Arrow** or **A/D** - Switch lanes
+- **Up Arrow**, **Space**, or **W** - Jump
+- Avoid the red obstacles!
+- Survive as long as possible
 
-## Requirements
+## 🚀 Deployment
 
-- Python 3.6 or higher
+This project is ready to deploy to Netlify! The site will automatically be detected as a static site.
 
-## How to Play
+### Deploy manually:
+1. Push to GitHub
+2. Connect repo to Netlify
+3. Build settings are auto-detected
 
-1. Run the game:
-   ```bash
-   python3 game.py
-   ```
-
-2. The game will tell you the range of numbers (1-100)
-
-3. Enter your guess when prompted
-
-4. Follow the hints:
-   - "📈 Try a higher number!" - Your guess was too low
-   - "📉 Try a lower number!" - Your guess was too high
-   - "🎉 Congratulations!" - You got it!
-
-5. After each round, you can:
-   - Play again (y)
-   - Quit and view statistics (n)
-
-## Example Gameplay
-
-```
-========================================
-   NUMBER GUESSING GAME
-========================================
-Welcome! Try to guess the secret number.
-I'll give you hints along the way!
-
-🎮 New Game! I'm thinking of a number between 1 and 100.
-Try to guess it!
-
-Enter your guess (1-100): 50
-📈 Try a higher number!
-Enter your guess (1-100): 75
-📉 Try a lower number!
-Enter your guess (1-100): 62
-📈 Try a higher number!
-Enter your guess (1-100): 68
-📉 Try a lower number!
-Enter your guess (1-100): 65
-
-🎉 Congratulations! You guessed it in 5 attempts!
-🏆 New best score!
-
-Play again? (y/n): n
-
-========================================
-📊 GAME STATISTICS
-========================================
-Games played: 1
-Best score: 5 attempts
-Average attempts: 5.00
-========================================
-
-Thanks for playing! Goodbye! 👋
+### Run locally:
+Simply open `index.html` in a web browser, or use a local server:
+```bash
+npx serve .
+# or
+python3 -m http.server
 ```
 
-## Development
+## 🎨 Game Elements
 
-The game is implemented as a class-based Python application with the following components:
+- **Player** - Blue cube character
+- **Obstacles** - Red boxes (ground and aerial)
+- **Track** - 3-lane road with lane markers
+- **Background** - Sky, clouds, and buildings
 
-- `NumberGuessingGame` class: Main game logic
-- Input validation and error handling
-- Statistics tracking across multiple rounds
-- Clean, user-friendly interface
+## 📁 Files
 
-## License
+- `index.html` - Main game page
+- `styles.css` - UI styling
+- `game.js` - Three.js game logic
 
-This project is open source and available for educational purposes.
+## 🛠️ Technologies
+
+- Three.js (via CDN)
+- Vanilla JavaScript
+- CSS3 Animations
+- HTML5 Canvas
